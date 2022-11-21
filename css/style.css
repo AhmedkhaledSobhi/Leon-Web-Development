@@ -1,0 +1,395 @@
+:root
+{
+    --maincolor:#10cab7;
+    --secondarycolor:#2c4755;
+    --section-backgroundcolor:#f6f6f6;
+}
+body{
+overflow-y: hidden; 
+}
+.loadingScrean{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #10cab7fc;
+    z-index: 999999999999999999999999 !important;
+}
+.loadingScrean .spinner {
+    width: 70px;
+    height: 70px;
+  
+    position: relative;
+    margin: 100px auto;
+  }
+  
+  .double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+
+.text-color-web
+{
+    color:var(--maincolor)
+}
+/* ========================  Start navbar  ============================ */
+.dropdown-menu[data-bs-popper]{
+    right: 0px !important;
+    left:auto;
+}
+nav
+{
+    --bs-bg-opacity: 1;
+    background-color: transparent;
+    /* background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity)); */
+    z-index: 999999999;
+}
+.navbar .nav-item .nav-link:hover
+{
+    color: brown;
+}
+.dropdown-toggle::after{
+    content: none;
+}
+.dropdown-menu li:hover {
+    margin-left: 7px;
+    color: var(--maincolor) !important;
+}
+.dropdown-menu li:hover a{
+    font-size: large;
+    color: var(--maincolor) !important;
+}
+/* ========================  End navbar  ============================ */
+
+/* ========================  Start Home  ============================ */
+.bg-img-io
+{
+    background-image: url(../img/landing.jpg);
+    background-position:center center;
+    background-size:cover;
+    height: 100vh;
+}
+/* ========================  End Home  ============================ */
+
+/* ========================  Start Services  ============================ */
+
+.services h2
+{
+    color: #ebeced;
+    font-size: 100px;
+    font-weight: 800px;
+    font-family: Work Sans, sans-serif;
+    line-height: 115px;
+}
+
+.services p
+{
+    font-size:18px;
+    font-weight:400px;
+    font-family: Work Sans, sans-serif;
+    line-height:23px;
+    color: #797979;
+    top: 85px;
+}
+
+i
+{
+    color: var(--maincolor);
+}
+
+.srv-img
+{
+    text-align: center;
+    position: relative;
+}
+
+.srv-img::before
+{
+    content: "";
+    position: absolute;
+    background-color: var(--secondarycolor);
+    width: 100px;
+    height: calc(100% + 100px);
+    top: -50px;
+    right: 0;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+/* ========================  End Services  ============================ */
+
+
+/* ===================== Start Portfolio ====================== */
+#Portfolio
+{
+    background: var(--section-backgroundcolor);
+}
+.Portfolio h2{
+    color: #ebeced;
+    font-size: 100px;
+    font-weight: 800px;
+    font-family: Work Sans, sans-serif;
+    line-height: 115px;
+}
+.Portfolio p{
+    font-size:18px;
+    font-weight:400px;
+    font-family: Work Sans, sans-serif;
+    line-height:23px;
+    color: #797979;
+    top: 85px;
+}
+#Portfolio .container
+{
+    width: 80% !important;
+}
+#Portfolio .container .col-md-4
+{
+    width: 30% !important;
+} 
+#Portfolio .container .col-md-4 img
+{
+    transition:all 2.0s;
+
+}
+#Portfolio .container .col-md-4:hover img
+{
+    transform:scale(1.1);
+} 
+
+/* ==================== End Portfolio ======================= */
+
+/* ==================== Start About ======================= */
+#About .container{
+    width: 80% !important;
+}
+.About h2{
+    color: #ebeced;
+    font-size: 100px;
+    font-weight: 800px;
+    font-family: Work Sans, sans-serif;
+    line-height: 115px;
+}
+.About p{
+    font-size:19px;
+    font-weight:400px;
+    /* font-family: Work Sans, sans-serif; */
+    line-height:25px;
+    color: #797979;
+    top: 83px;
+}
+.lineAbout{
+    width: 50%;
+    height: 1%;
+    border: var(--maincolor) solid 1px;
+}
+.abo-img{
+    text-align: center;
+    position: relative;
+}
+.abo-img::before{
+
+    content: '';
+    position: absolute;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    z-index: -1;
+    left: 25px;
+    border-radius: 5px;
+
+}
+.abo-img::after{
+
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    top: -40px;
+    right: -100px;
+    border-radius: 3px;
+    border-left: 80px solid var(--maincolor);
+    border-bottom: 80px solid var(--maincolor);
+    z-index: -1;
+
+}
+
+/* ==================== End About ======================= */
+
+/* ==================== Start Contact =================== */
+#Contact{
+    height: 75vh;
+    background-color: var(--section-backgroundcolor);
+}
+.Contact h2{
+    color: #ebeced;
+    font-size: 100px;
+    font-weight: 800px;
+    font-family: Work Sans, sans-serif;
+    line-height: 115px;
+}
+.Contact p{
+    font-size:19px;
+    font-weight:400px;
+    line-height:25px;
+    color: #797979;
+    top: 83px;
+}
+#Contact .link{
+    text-decoration: none;
+    color: var(--maincolor);
+    font-family:  Work Sans, sans-serif;
+}
+
+#Contact i{
+    color: #2c4755 !important;
+    margin: 0 3px ;
+}
+/* ==================== End Contact ===================== */
+
+/* ==================== Start footer ==================== */
+#footer{
+    background-color: var(--secondarycolor);
+}
+#footer span{
+    color: var(--maincolor);
+}
+/* ==================== End footer ===================== */
+
+
+/* ===================== Start @media Screan ===========================  */
+
+
+@media (max-width: 767.98px) 
+{
+    #Home .container{
+        padding-top: 10px !important;
+    }
+    
+    .srv-img
+    {
+        display: none;
+    }
+
+
+/* ------- Start services -------- */
+
+    .services h2{
+        font-size:60px;
+        line-height:13px;
+    }
+    .services p{
+        font-size:11px;
+        top: 15px;
+
+    }
+/* ------------- End services -------------- */
+
+
+/* ------------- Start Portfolio -------------- */
+    .Portfolio h2{
+        font-size:60px;
+        line-height:13px;
+    }
+    .Portfolio p{
+        font-size:11px;
+        top: 15px;
+    }
+
+    #Portfolio .container .col-md-4
+    {
+        margin: 10px 0px;
+        width: 100% !important;
+    }   
+/* ------------- End Portfolio -------------- */
+
+/* ------------- Start About -------------- */
+    .About{
+        margin: 45px 0px 0px;
+    }
+    .About h2{
+        font-size:70px;
+        line-height:13px;
+    }
+    .About p{
+        font-size:16px;
+        font-weight: 450 !important;;
+        top: 20px;
+    }
+    #About .row .col-md-6 .fw-bold{
+        margin-top: 45px !important;
+    }
+    .lineAbout{
+        margin: 20px 0;
+    }
+   
+/* ------------- End About -------------- */
+
+/* ------------- Start Contact ---------- */
+
+    #Contact{
+        height:60vh !important;
+    }
+    .Contact h2{
+        font-size:70px;
+        line-height:13px;
+    }
+    .Contact p{
+        font-size:13px;
+        top: 20px;
+    }
+    .abo-img::before{
+        width: 50px;
+        height: calc(100% + 50px);
+        top: -25px;
+        left: 0px;
+    }
+    .abo-img::after{
+        width: 90px;
+        height: 100%;
+        top: -25px;
+        right: -30px;
+        border-left: 50px solid var(--maincolor);
+        border-bottom: 50px solid var(--maincolor);
+    }
+/* ------------- End Contact ----------- */
+
+
+}
+
+   
+/* =============================== End @media Screan ========================== */
